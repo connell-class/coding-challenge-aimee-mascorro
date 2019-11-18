@@ -16,7 +16,8 @@ alter table "shoppingitems" add foreign key (shoppinglistid) references shopping
 
 COMMIT;
 
-select itemdescription from "shoppingitems" where shoppinglistid = '3';
+select itemdescription, itemtype from "shoppingitems" where shoppinglistid = '3';
+select* from "shoppingitems", "shoppinglist" where shoppinglistid = shoppinglist.shoppingid;
 
 insert into shoppinglist ("shopping") values ('redecorating');
 
